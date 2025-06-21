@@ -1,6 +1,3 @@
-
-
-// Para trabajar Repository
 import { studentService } from '../services/service.js';
 import StudentsDto from '../services/dto/student.dto.js';
 
@@ -17,7 +14,7 @@ export async function getAllStudents(req, res) {
 
 export async function saveStudent(req, res) {
     try {
-        const studentDto = new StudentsDto(req.body); // Antes paso por el DTO y moldeo la info
+        const studentDto = new StudentsDto(req.body);
         let result = await studentService.save(studentDto);
         res.status(201).send(result);
     } catch (error) {

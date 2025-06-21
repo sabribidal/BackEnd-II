@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import { Command } from 'commander';
 
-const program = new Command(); //Crea la instancia de comandos de commander.
+const program = new Command();
 
 program
     .option('-d', 'Variable para debug', false)
@@ -9,7 +9,6 @@ program
     .option('--mode <mode>', 'Modo de trabajo', 'dev')
 program.parse();
 
-//console.log("Options: ", program.opts());
 console.log("Environment Mode Option: ", program.opts().mode);
 console.log("Persistence Mode Option: ", program.opts().persist);
 
